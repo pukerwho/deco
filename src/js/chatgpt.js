@@ -38,7 +38,6 @@ btn?.addEventListener('click', (e) => {
             "content": "What is the decomposition time of" + keyword + "? Give a short answer with a specific decomposition time."
           },
         ],
-        temperature: 0.2,
       });
       htmlSend(keyword, "Отримали коротку відповідь");
       console.log("Отримали коротку відповідь");
