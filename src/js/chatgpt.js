@@ -35,9 +35,10 @@ btn?.addEventListener('click', (e) => {
         messages: [
           {
             "role": "user",
-            "content": "What is the decomposition time of" + keyword + "? Give a short answer."
+            "content": "What is the decomposition time of" + keyword + "? Give a short answer with a specific decomposition time."
           },
         ],
+        temperature: 0.2,
       });
       htmlSend(keyword, "Отримали коротку відповідь");
       console.log("Отримали коротку відповідь");
@@ -47,7 +48,7 @@ btn?.addEventListener('click', (e) => {
         messages: [
           {
             "role": "user",
-            "content": "Write in more detail on the following topic: Decomposition of " + keyword + ". Answer in MARKDOWN format. But don't use headings.",
+            "content": "Write in more detail on the following topic: Decomposition of " + keyword + ". Answer in three short paragraphs. Answer in MARKDOWN format. But don't use headings.",
           },
         ],
       });
@@ -59,7 +60,7 @@ btn?.addEventListener('click', (e) => {
         messages: [
           {
             "role": "user",
-            "content": "Tell interesting facts about the decomposition of " + keyword + ". Do it in the form of a list. Answer in MARKDOWN format. But don't use headings."
+            "content": "Tell interesting facts (no more than 5) about the decomposition of " + keyword + ". Do it in the form of a list. Answer in MARKDOWN format. But don't use headings."
           },
         ],
       });
@@ -71,7 +72,7 @@ btn?.addEventListener('click', (e) => {
         messages: [
           {
             "role": "user",
-            "content": "Summary and final thoughts about: What is the decomposition time of " + keyword + ". Answer in MARKDOWN format. But don't use headings."
+            "content": "Summary and final thoughts about: What is the decomposition time of " + keyword + ". Put it all in one short paragraph. Answer in MARKDOWN format. But don't use headings."
           },
         ],
       });
