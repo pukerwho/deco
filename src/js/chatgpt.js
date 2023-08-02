@@ -50,7 +50,6 @@ btn?.addEventListener('click', (e) => {
             "content": "Write in more detail on the following topic: Decomposition of " + keyword + ". Answer in MARKDOWN format. But don't use headings.",
           },
         ],
-        "max_tokens": 200
       });
       htmlSend(keyword, "Отримали довгу відповідь");
       console.log("Отримали довгу відповідь");
@@ -63,7 +62,6 @@ btn?.addEventListener('click', (e) => {
             "content": "Tell interesting facts about the decomposition of " + keyword + ". Do it in the form of a list. Answer in MARKDOWN format. But don't use headings."
           },
         ],
-        "max_tokens": 200
       });
       htmlSend(keyword, "Отримали факти");
       console.log("Отримали факти");
@@ -76,7 +74,6 @@ btn?.addEventListener('click', (e) => {
             "content": "Summary and final thoughts about: What is the decomposition time of " + keyword + ". Answer in MARKDOWN format. But don't use headings."
           },
         ],
-        "max_tokens": 50
       });
       htmlSend(keyword, "Отримали висновок");
       console.log("Отримали висновок");
