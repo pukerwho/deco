@@ -4,7 +4,12 @@ Template Name: Simple Single
 Template Post Type: post
 */
 ?>
-<?php get_header(); ?>
+<?php 
+get_header(); 
+$currentId = get_the_ID();
+$countNumber = tutCount($currentId); 
+$Parsedown = new Parsedown();
+?>
 
 <div class="container">
   <div class="flex flex-wrap lg:-mx-6 mb-12">
