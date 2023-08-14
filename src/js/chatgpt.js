@@ -80,7 +80,7 @@ btn?.addEventListener('click', (e) => {
 
       console.log(factsAnswer);
       
-      title = "How Long Does It Take for " + keyword + " to Decompose?";  
+      title = "How long does it take for " + keyword + " to decompose?";  
       short = shortAnswer.data.choices[0].message.content;
       long = longAnswer.data.choices[0].message.content;
       facts = factsAnswer.data.choices[0].message.content;

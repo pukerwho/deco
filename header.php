@@ -74,12 +74,16 @@
         <div class="px-4">
           <a href="<?php echo get_home_url(); ?>" class="text-xl lg:text-2xl"><span class="w-[32px] w-min-[32px] h-[32px] h-min-[32px] inline-flex items-center justify-center bg-blue-500 text-white font-black rounded">D</span>ecompose <span class="w-[32px] w-min-[32px] h-[32px] h-min-[32px] inline-flex items-center justify-center bg-red-500 text-white font-black rounded">T</span>ime</a>
         </div>
-        <div class="hidden lg:block header-menu px-4">
-          <?php wp_nav_menu([
-            'theme_location' => 'header',
-            'container' => 'div',
-            'menu_class' => 'flex top-menu'
-          ]); ?>
+        <div class="hidden lg:flex px-4">
+          <div class="px-4">
+            <a href="/all-posts" class="text-gray-700">All Posts</a>
+          </div>
+          <div class="px-4">
+            <a href="/interesting-facts" class="text-gray-700">Interesting Facts</a>
+          </div>
+          <div class="px-4">
+            <a href="/contact-us" class="bg-blue-500 hover:bg-blue-600 text-white text-center rounded p-3">Contact us</a>
+          </div>
         </div>
         <div class="lg:hidden text-gray-600 cursor-pointer menu-js">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">

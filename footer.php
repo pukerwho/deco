@@ -9,7 +9,7 @@
           <a href="<?php echo get_home_url(); ?>" class="text-2xl"><span class="w-[32px] w-min-[32px] h-[32px] h-min-[32px] inline-flex items-center justify-center bg-blue-500 text-white font-black rounded">D</span>ecompose <span class="w-[32px] w-min-[32px] h-[32px] h-min-[32px] inline-flex items-center justify-center bg-red-500 text-white font-black rounded">T</span>ime</a>
         </div>
         <div>
-          <div class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam vero odio porro neque, soluta tempora.</div>
+          <div class="mb-4">This web resource collects articles, research and information on the shelf life of various materials and objects that affect our environment.</div>
           <div>© 2023</div>
         </div>
       </div>
