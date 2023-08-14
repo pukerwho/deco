@@ -14,13 +14,13 @@ Template Name: All Posts
       <div class="bg-gray-100 rounded-lg p-5 mb-12">
         <?php get_template_part("template-parts/search"); ?>
       </div>
-      <div class="flex flex-wrap lg:-mx-4 mb-6">
+      <div class="flex flex-wrap lg:-mx-4 mb-12">
         <?php
           global $wp_query, $wp_rewrite;  
           $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
           $all_posts = new WP_Query( array( 
             'post_type' => 'post', 
-            'posts_per_page' => 20,
+            'posts_per_page' => 40,
             'order' => 'DESC',
             'paged' => $current,
           ) );
@@ -28,7 +28,7 @@ Template Name: All Posts
         ?>
           <div class="w-full lg:w-1/2 lg:px-4 mb-2">
             <?php $current_id = get_the_ID(); ?>
-            <a href="<?php the_permalink(); ?>" class="text-lg hover:text-blue-500"><?php echo get_post_meta($current_id, 'meta_post_name', true); ?></a>
+            <a href="<?php the_permalink(); ?>" class="capitalize text-lg hover:text-blue-500"><?php echo get_post_meta($current_id, 'meta_post_name', true); ?></a>
           </div>
         <?php endwhile; endif; wp_reset_postdata(); ?>
       </div>
