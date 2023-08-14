@@ -23,13 +23,12 @@ Template Name: All Posts
             'posts_per_page' => 40,
             'order' => 'DESC',
             'paged' => $current,
-            'meta_query' => array(
-              array(
-                'key' => '_wp_page_template',
-                'value' => 'tpl_single.php',
-                'compare' => 'NOT IN' 
-              ),
-            ),
+            // 'meta_query' => array(
+            //   array(
+            //     'key' => '_wp_page_template',
+            //     'value' => 'default',
+            //   ),
+            // ),
           ) );
           if ($all_posts->have_posts()) : while ($all_posts->have_posts()) : $all_posts->the_post(); 
         ?>
