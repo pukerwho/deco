@@ -37,7 +37,7 @@
         <?php 
           $posts = new WP_Query( array( 
             'post_type' => 'post', 
-            'posts_per_page' => 10,
+            'posts_per_page' => 20,
             'order' => 'DESC',
           ) );
           if ($posts->have_posts()) : while ($posts->have_posts()) : $posts->the_post(); 
