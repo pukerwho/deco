@@ -34,7 +34,7 @@ Template Name: All Posts
         ?>
           <div class="w-full lg:w-1/2 lg:px-4 mb-2">
             <?php $current_id = get_the_ID(); ?>
-            <a href="<?php the_permalink(); ?>" class="capitalize text-lg hover:text-blue-500"><?php echo $post_name = get_post_meta($current_id, 'meta_post_name', true); ?>11</a>
+            <a href="<?php the_permalink(); ?>" class="capitalize text-lg hover:text-blue-500"><?php echo $post_name = get_post_meta($current_id, 'meta_post_name', true); ?></a>
           </div>
         <?php endwhile; endif; wp_reset_postdata(); ?>
       </div>
