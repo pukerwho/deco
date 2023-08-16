@@ -76,10 +76,10 @@
         </div>
         <div class="hidden lg:flex px-4">
           <div class="px-4">
-            <a href="/all-posts" class="text-gray-700">All Posts</a>
+            <a href="/all-posts" class="text-gray-700 hover:bg-blue-500">All Posts</a>
           </div>
           <div class="px-4">
-            <a href="/interesting-facts" class="text-gray-700">Interesting Facts</a>
+            <a href="/interesting-facts" class="text-gray-700 hover:bg-blue-500">Interesting Facts</a>
           </div>
           <div class="px-4">
             <a href="/contact-us" class="bg-blue-500 hover:bg-blue-600 text-white text-center rounded p-3">Contact us</a>
