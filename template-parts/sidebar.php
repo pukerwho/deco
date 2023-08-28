@@ -91,6 +91,7 @@
   </div>
 </div>
 
+<?php if (!is_single()): ?>
 <div class="border border-gray-200 rounded-lg mb-6">
   <div class="bg-gray-100 text-xl text-center font-medium py-4 px-2">
     <?php _e("What types of secondary raw materials do we distinguish?", "treba-wp"); ?>
@@ -170,3 +171,4 @@
     </div>
   </div>
 </div>
+<?php endif; ?>
