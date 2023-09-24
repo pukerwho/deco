@@ -50,6 +50,12 @@ $Parsedown = new Parsedown();
           </div>
         </div>
         <div class="mb-12">
+          <h2 class="text-3xl font-semibold mb-4">Is it possible to recycle <?php echo get_post_meta($currentId, "meta_post_name", true); ?>?</h2>
+          <div>
+            <p><?php $meta_recycle = get_post_meta($currentId, "meta_post_recycle", true); echo $Parsedown->text($meta_recycle); ?></p>
+          </div>
+        </div>
+        <div class="mb-12">
           <h2 class="text-3xl font-semibold mb-4"><?php _e("Intresting facts", "treba-wp"); ?></h2>
           <div>
             <p><?php $meta_facts = get_post_meta($currentId, "meta_post_facts", true); echo $Parsedown->text($meta_facts); ?></p>

@@ -1,6 +1,6 @@
 <?php 
 
-function add_new_post($title, $meta_long, $meta_short, $meta_facts, $meta_summary, $meta_name) {
+function add_new_post($title, $meta_long, $meta_recycle, $meta_short, $meta_facts, $meta_summary, $meta_name) {
   
   $my_post = array(
     'post_title'    => $title,
@@ -10,6 +10,7 @@ function add_new_post($title, $meta_long, $meta_short, $meta_facts, $meta_summar
     'post_author'   => 1,
     'meta_input'   => array(
       'meta_post_long' => $meta_long,
+      'meta_post_recycle' => $meta_recycle,
       'meta_post_short' => $meta_short,
       'meta_post_facts' => $meta_facts,
       'meta_post_summary' => $meta_summary,
@@ -24,12 +25,13 @@ function add_new_post($title, $meta_long, $meta_short, $meta_facts, $meta_summar
 function chatgpt_function() {
   $title = stripslashes_deep($_POST['title']);
   $meta_long = stripslashes_deep($_POST['meta_post_long']);
+  $meta_recycle = stripslashes_deep($_POST['meta_post_recycle']);
   $meta_short = stripslashes_deep($_POST['meta_post_short']);
   $meta_facts = stripslashes_deep($_POST['meta_post_facts']);
   $meta_summary = stripslashes_deep($_POST['meta_post_summary']);
   $meta_name = stripslashes_deep($_POST['meta_post_name']);
 
-  add_new_post($title, $meta_long, $meta_short, $meta_facts, $meta_summary, $meta_name);
+  add_new_post($title, $meta_long, $meta_recycle, $meta_short, $meta_facts, $meta_summary, $meta_name);
   wp_die();
 }
 

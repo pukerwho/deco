@@ -54,6 +54,18 @@ btn?.addEventListener('click', (e) => {
       htmlSend(keyword, "Отримали довгу відповідь");
       console.log("Отримали довгу відповідь");
 
+      const recycleAnswer = await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        messages: [
+          {
+            "role": "user",
+            "content": "Is it possible to recycle " + keyword + "?. Answer in three short paragraphs. Answer in MARKDOWN format. But don't use headings.",
+          },
+        ],
+      });
+      htmlSend(keyword, "Отримали довгу відповідь");
+      console.log("Отримали довгу відповідь");
+
       const factsAnswer = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
         messages: [
@@ -83,6 +95,7 @@ btn?.addEventListener('click', (e) => {
       title = "How long does it take for " + keyword + " to decompose?";  
       short = shortAnswer.data.choices[0].message.content;
       long = longAnswer.data.choices[0].message.content;
+      recycle = recycleAnswer.data.choices[0].message.content;
       facts = factsAnswer.data.choices[0].message.content;
       summary = summaryAnswer.data.choices[0].message.content;
 
@@ -91,6 +104,7 @@ btn?.addEventListener('click', (e) => {
         'action': 'chatgpt_click_action', 
         'title': title,
         'meta_post_long': long,
+        'meta_post_recycle': recycle,
         'meta_post_short': short,
         'meta_post_facts': facts,
         'meta_post_summary': summary,
