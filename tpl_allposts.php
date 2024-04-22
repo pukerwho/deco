@@ -5,7 +5,7 @@ Template Name: All Posts
 ?>
 <?php get_header(); ?>
 
-<div class="container">
+<div class="container mt-8">
   <div class="flex flex-wrap mb-12">
     <div class="w-full mb-6 lg:mb-0">
       <div class="mb-6">

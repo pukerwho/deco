@@ -11,7 +11,7 @@ $countNumber = tutCount($currentId);
 $Parsedown = new Parsedown();
 ?>
 
-<div class="container">
+<div class="container mt-8">
   <div class="flex flex-wrap lg:-mx-6 mb-12">
     <div class="w-full lg:w-2/3 lg:px-6 mb-6 lg:mb-0">
       <div class="mb-6">

@@ -68,7 +68,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-  <header class="bg-white py-4 mb-12">
+  <header class="bg-white py-4">
     <div class="container">
       <div class="flex flex-wrap justify-between items-center lg:-mx-4">
         <div class="px-4">
