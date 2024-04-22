@@ -18,7 +18,7 @@ $Parsedown = new Parsedown();
         <h1 class="text-4xl font-black"><?php the_title(); ?></h1>
       </div>
       <!-- Meta -->
-      <div class="flex items-center gap-x-2 text-gray-600 font-medium mb-12">
+      <div class="flex items-center gap-x-2 text-gray-600 font-medium mb-8">
         <div class=""><?php echo get_the_modified_time('F j, Y'); ?></div>
         <div class="bg-gray-500 w-[4px] h-[4px] rounded-full"></div>
         <div class="post-time-read"><span></span> min read</div>
@@ -35,8 +35,13 @@ $Parsedown = new Parsedown();
       </div>
       <!-- end Meta -->
 
+      <?php $thumb = get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>
+      <?php if ($thumb): ?>
+        <img class="w-full h-[300px] min-h-[300px] lg:h-[450px] lg:min-h-[450px] object-cover rounded-lg mb-6" alt="<?php the_title(); ?>" src="<?php echo $thumb; ?>" loading="lazy">
+      <?php endif; ?>
+
       <!-- Content -->
-      <div class="content" itemprop="articleBody">
+      <div class="content mb-8" itemprop="articleBody">
         <div class="single-subjects bg-yellow-50 border rounded p-4 mb-5">
           <div class="text-2xl font-bold uppercase mb-3">
             <?php _e('Content','treba-wp'); ?>:
